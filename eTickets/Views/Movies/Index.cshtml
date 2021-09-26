@@ -39,9 +39,10 @@
                                 else if (DateTime.Now > item.EndDate)
                                 {
                                     <span class="badge bg-danger text-white">EXPIRED</span>
-                                } else
+                                }
+                                else
                                 {
-                                <span class="badge bg-primary text-white">UPCOMING</span>
+                                    <span class="badge bg-primary text-white">UPCOMING</span>
                                 }
                             </p>
 
@@ -62,3 +63,5 @@
         </div>
     }
 </div>
+
+@await Html.PartialAsync("_CreateItem", "Movies") 
