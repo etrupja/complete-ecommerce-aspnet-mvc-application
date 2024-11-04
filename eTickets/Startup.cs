@@ -24,6 +24,7 @@ namespace eTickets
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            services.AddCors();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -42,6 +43,7 @@ namespace eTickets
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
+            app.UseCors();
             app.UseRouting();
 
             app.UseAuthorization();
